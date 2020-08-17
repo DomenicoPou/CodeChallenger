@@ -79,7 +79,7 @@ namespace CodeChallenger.Handlers
             string model = $"using System;\nusing System.Collections.Generic;\n\nnamespace Challenges\n{{\n";
             model += $"\tpublic static class { challenge.title.Replace(" ", String.Empty) } \n\t{{\n";
             model += $"\t\t/// <summary>\n";
-            model += $"\t\t/// Title: {challenge.title}\n";
+            model += $"\t\t/// Title: {challenge.titleOriginal}\n";
             model += $"\t\t/// Description: \n";
             model += $"\t\t///\t\t{description}\n";
             model += $"\t\t/// </summary>\n";

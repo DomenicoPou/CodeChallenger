@@ -75,6 +75,8 @@ namespace CodeChallenger.Handlers
 
             challenge.title = RemoveNonLetters(ComplexStringHandler.StringCheckToWords(html.DocumentNode.Descendants("h2")
                 .First().InnerText));
+            challenge.titleOriginal = html.DocumentNode.Descendants("h2")
+                .First().InnerText;
             challenge.description = html.DocumentNode.Descendants("div")
                 .Where(node => node.GetAttributeValue("class", "")
                 .Equals("problem_content")).First().InnerHtml;
